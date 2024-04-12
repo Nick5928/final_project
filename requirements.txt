@@ -1,0 +1,6 @@
+Flask==1.1.4
+Jinja2==2.10.1
+markupsafe==2.0.1
+requests
+psycopg2
+functools
