@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+        <title>{% block title %}Final Project{% endblock %}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="/static/css/base.css">
+        <script src="/static/js/util.js"></script>
+        {% block extra %}{% endblock %}
+        {% endblock %}
+    </head>
+
+    <body>
+        <ul>
+            <li {% block nav_home %}{% endblock %}><a href="/home">HOME</a></li>
+            <li {% block nav_intro %}{% endblock %}><a href="/introduction">INTRODUCTION</a></li>
+            <li {% block nav_recipe %}{% endblock %}><a href="/recipe">RECIPE GENERATOR</a></li>
+            <li {% block nav_plan %}{% endblock %}><a href="/plan">MEAL PLAN GENERATOR</a></li>
+            <li {% block nav_user %}{% endblock %}><a href="/myplan">MY MEAL PLAN</a></li>
+        </ul>
+
+
+        <div id="content" style="margin-left: 15px; margin-top: 10px;">{% block content %}{% endblock %}</div>
+    </body>
+</html>
