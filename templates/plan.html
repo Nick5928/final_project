@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Meal Plan Generator{% endblock %}
+
+
+
+{% block extra %}
+<script src="/static/js/plan.js"></script>
+{% endblock%}
+
+
+{% block nav_plan %}class="active"{% endblock %}
+
+
+{% block content %}
+
+<h1>Meal Plan Generator</h1>
+
+
+<div id="target_cal_container">
+    <form style ="width: 300px;" id="target_cal_form">
+        <div class="form-row" id = "target_row">
+            <div class="form-group">
+                <label for="target_cal">Amount of target calories</label>
+                <input type="number" class="form-control" id="target_cal" placeholder="Target Calories">
+            </div>
+        </div>
+    </form>
+
+    <button class="button" id="gen_meal_plan">Generate Meal Plan</button>
+</div>
+
+  
+{% endblock %}
+
+{% block table %} {% endblock %}
+
+
+{% block under_table %}{% endblock %}

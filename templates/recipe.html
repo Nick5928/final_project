@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Recipe Generator{% endblock %}
+
+
+{% block extra %}
+<script src="/static/js/recipe.js"></script>
+{% endblock%}
+
+
+{% block nav_recipe %}class="active"{% endblock %}
+
+
+{% block content %}
+
+<h1>Recipe Generator</h1>
+
+
+<form>
+    <div class="form-row">
+        <div class="form-group">
+            <label for="ingredients">REQUIRED Ingredients:</label>
+            <input type="text" class="form-control" id="ingredients" placeholder="Ingredient list seperated by commas">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="exclude">Exclude ingredients</label>
+            <input type="text" class="form-control" id="exclude" placeholder="Exclude ingredient list seperated by commas">
+        </div>
+    </div>
+</form>
+
+<button class="button" id="get_recipes">Get Recipes</button>
+
+
+ 
+{% endblock %}
+
+
+{% block table %} {% endblock %}
+
+
+
+{% block under_table %}{% endblock %}

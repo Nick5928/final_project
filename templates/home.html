@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+
+
+{% block extra %}
+{% endblock%}
+
+
+{% block nav_home %}class="active"{% endblock %}
+
+
+{% block content %}
+
+<h1>RecipeWizard</h1>
+
+<p>
+    This tool can help you transform your eating habits.
+    It comes with a Meal Plan Generator to help you generate a meal plan for the day.
+</p>
+
+<p>
+    This tool stores your favorite recipes.
+</p>
+
+<p>
+    It can also help you randomly create a recipe based off ingedients.
+</p>
+
+<h2>How It Works</h2>
+
+<h3>Meal Plan Generator</h3>
+<p>Enter Dietary preferences and restrictions and calories goal.</p>
+<p>Generate a 3 meal plan for one day.</p>
+
+<h3>My Recipes</h3>
+<p>Your recipes you favorited in the past</p>
+
+<h3>Recipe Generator</h3>
+<p>Enter in the ingredients you want to cook with.</p>
+<p>It will come up with 3 recipes for you to cook with those ingredients.</p>
+  
+{% endblock %}
+
+
+{% block table %}style = "display: none;"{% endblock %}
+
+
+{% block under_table %}{% endblock %}

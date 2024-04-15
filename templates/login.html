@@ -1,0 +1,28 @@
+{% extends "base_form.html" %}
+
+{% block title %}Login Page{% endblock %}
+
+{% block form %}
+
+    <div class="form-container" id="login-form">
+        <h2>Login</h2>
+        {% block failure %}{% endblock %}
+        <form action="/login" method="post">
+            <div class="form-group">
+                <label for="login-username">Username:</label>
+                <input type="text" id="login-username" name="login-username" required>
+            </div>
+            <div class="form-group">
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" name="login-password" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login">
+            </div>
+        </form>
+        
+        <a href="/signup_page">Don't have an account? Sign Up</a>
+        
+    </div>
+
+{% endblock %}

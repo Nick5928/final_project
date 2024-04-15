@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}My Recipes{% endblock %}
+
+
+
+{% block extra %}
+<script src="/static/js/user_recipes.js"></script>
+{% endblock%}
+
+
+{% block nav_user %}class="active"{% endblock %}
+
+
+{% block content %}
+<table class="table table-bordered" id="recip_table">
+    <caption>My Recipes</caption>
+    <thead>
+        <tr>
+        <th>Recipe Name</th>
+        <th>Carbs(grams)</th>
+        <th>Fat(grams)</th>
+        <th>Protein(grams)</th>
+        <th>Calories</th>
+        <th>Delete From Recipes</th>
+        </tr>
+    </thead>
+   
+    <tbody>
+        {% for recipe in user_recipes %}
+        <tr>
+            <td class="link_cell"><a href="{{ recipe.recipe_link }}" target="_blank">{{ recipe.recipe_name }}</a></td>
+            <td class="carbs_cell">{{ recipe.carbohydrates }}</td>
+            <td class="fat_cell">{{ recipe.fat }}</td>
+            <td class="protein_cell">{{ recipe.protein }}</td>
+            <td class="calories_cell">{{ recipe.calories }}</td>
+            <td class="button_cell"><button class="button recipe_del">Delete from recipes</button></td>
+        </tr>
+
+        {% endfor %}
+    </tbody>
+    <tfoot>
+    </tfoot>
+</table>
+  
+{% endblock %}
+
+
+{% block table %}style = "display: none;"{% endblock %}
+
+
+
+{% block under_table %}{% endblock %}
