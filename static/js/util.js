@@ -15,6 +15,7 @@ function create_table(data, recipTable) {
             <td class = fat_cell>${fat}</td>
             <td class = protein_cell>${protein}</td>
             <td class = calories_cell>${calories}</td>
+            <td class="button_cell"><button class="button recipe_add">Add To my recipes</button></td>
         </tr>
     `;
         
